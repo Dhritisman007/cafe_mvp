@@ -82,7 +82,7 @@ export function MenuPreview() {
                       initial={{ opacity: 0, scale: 1.08 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0 }}
-                      transition={{ duration: 0.9, ease }}
+                      transition={{ duration: 0.5, ease }}
                     >
                       <Photo image={active.image} sizes="40vw" />
                     </motion.div>
@@ -116,7 +116,7 @@ export function MenuPreview() {
                 {items.map((item, i) => (
                   <motion.li
                     key={item.name}
-                    variants={{ hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0, transition: { duration: 0.8, ease } } }}
+                    variants={{ hidden: { opacity: 0, y: 24 }, show: { opacity: 1, y: 0, transition: { duration: 0.4, ease } } }}
                     onMouseEnter={() => setActiveName(item.name)}
                     onFocus={() => setActiveName(item.name)}
                     tabIndex={0}
@@ -130,7 +130,7 @@ export function MenuPreview() {
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <div className="min-w-0 flex-1">
-                      <h3 className="font-serif text-[2rem] leading-none text-forest transition-all duration-700 ease-soft group-hover:translate-x-2 group-hover:italic group-focus:italic md:text-6xl">
+                      <h3 className="font-serif text-[2rem] leading-none text-forest transition-all duration-450 ease-soft group-hover:translate-x-2 group-hover:italic group-focus:italic md:text-6xl">
                         {item.name}
                       </h3>
                       <p className="mt-2 text-[10px] font-semibold tracking-[.24em] text-forest/45 uppercase">
@@ -142,7 +142,7 @@ export function MenuPreview() {
                     {item.price && <span className="font-serif text-2xl text-forest">{item.price}</span>}
                     <span
                       aria-hidden="true"
-                      className="hidden shrink-0 -translate-x-2 text-lg text-wine opacity-0 transition-all duration-500 ease-soft group-hover:translate-x-0 group-hover:opacity-100 md:block"
+                      className="hidden shrink-0 -translate-x-2 text-lg text-wine opacity-0 transition-all duration-350 ease-soft group-hover:translate-x-0 group-hover:opacity-100 md:block"
                     >
                       ✦
                     </span>
@@ -176,7 +176,7 @@ export function MenuPreview() {
               }
             >
               <ImageReveal className={`group ${f.ratio}`} delay={i * 0.12}>
-                <div className="absolute inset-0 transition-transform duration-[1.4s] ease-soft group-hover:scale-105">
+                <div className="absolute inset-0 transition-transform duration-450 ease-soft group-hover:scale-105">
                   <Photo image={f.image} sizes="(min-width: 768px) 45vw, 100vw" />
                 </div>
               </ImageReveal>

@@ -24,7 +24,7 @@ export function Reveal({
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={viewport}
-      transition={{ duration: 1.1, ease, delay }}
+      transition={{ duration: 0.55, ease, delay }}
     >
       {children}
     </motion.div>
@@ -57,7 +57,7 @@ export function Lines({
           <motion.span
             className="block"
             variants={{ hidden: { y: "115%" }, show: { y: "0%" } }}
-            transition={{ duration: 1.25, ease, delay: delay + i * 0.1 }}
+            transition={{ duration: 0.65, ease, delay: delay + i * 0.06 }}
           >
             {line}
           </motion.span>
@@ -83,14 +83,14 @@ export function ImageReveal({
       initial={{ clipPath: "inset(14% 10% 14% 10%)", opacity: 0.4 }}
       whileInView={{ clipPath: "inset(0% 0% 0% 0%)", opacity: 1 }}
       viewport={viewport}
-      transition={{ duration: 1.5, ease, delay }}
+      transition={{ duration: 0.75, ease, delay }}
     >
       <motion.div
         className="absolute inset-0"
-        initial={{ scale: 1.2 }}
+        initial={{ scale: 1.12 }}
         whileInView={{ scale: 1 }}
         viewport={viewport}
-        transition={{ duration: 1.9, ease, delay }}
+        transition={{ duration: 0.9, ease, delay }}
       >
         {children}
       </motion.div>

@@ -3,9 +3,12 @@
  *  CAFE LYCHEE TREE — SITE CONTENT
  *  Everything the café owner may want to change lives in this file.
  *
- *  IMAGES: drop a photo into /public/images and set its `src`,
- *  e.g. src: "/images/hero.jpg". While `src` is empty, a clearly
- *  labelled atmospheric placeholder is shown instead.
+ *  IMAGES: every slot below currently points to a free stock photo in
+ *  /public/images (from Unsplash, chosen to match the mood — none of them
+ *  are actual photos of Cafe Lychee Tree). Replace any of them with the
+ *  café's real photography by dropping a file into /public/images and
+ *  updating that image's `src`, e.g. src: "/images/hero.jpg". Clearing
+ *  `src` back to "" brings back the labelled placeholder.
  * ─────────────────────────────────────────────────────────────
  */
 
@@ -89,15 +92,15 @@ export const nav = [
 /* ───────────── Images ───────────── */
 
 export const images = {
-  hero: img("HERO IMAGE — REPLACE WITH CAFE PHOTO", "Cafe Lychee Tree in the evening, warm lights and tables full of people", "amber"),
-  vibeMain: img("INTERIOR IMAGE", "Inside Cafe Lychee Tree — greenery, warm lamps and cosy tables", "green"),
-  vibeSecondary: img("DRINK IMAGE", "A drink on a café table at Lychee Tree", "wine"),
-  stay: img("INTERIOR / AMBIENCE IMAGE", "Evening ambience at Cafe Lychee Tree", "amber"),
-  finalCta: img("FINAL CTA IMAGE — EVENING TABLE", "A table waiting at Cafe Lychee Tree", "wine"),
+  hero: img("HERO IMAGE — REPLACE WITH CAFE PHOTO", "Warm-lit café evening (stock photo)", "amber", "/images/hero.jpg"),
+  vibeMain: img("INTERIOR IMAGE", "Cosy café interior with plants (stock photo)", "green", "/images/vibe-main.jpg"),
+  vibeSecondary: img("DRINK IMAGE", "A drink on a café table (stock photo)", "wine", "/images/vibe-secondary.jpg"),
+  stay: img("INTERIOR / AMBIENCE IMAGE", "Evening café ambience (stock photo)", "amber", "/images/stay.jpg"),
+  finalCta: img("FINAL CTA IMAGE — EVENING TABLE", "A table waiting in the evening (stock photo)", "wine", "/images/final-cta.jpg"),
   foodStrip: [
-    { image: img("DRINK IMAGE — HANDS HOLDING SHAKE", "Hands holding a shake", "wine"), ratio: "aspect-[3/4]", caption: "Strawberry or Oreo? Both is an answer." },
-    { image: img("TABLE SHOT", "A table full of food at Lychee Tree", "amber"), ratio: "aspect-[16/10]", caption: "The table, mid-conversation." },
-    { image: img("PEOPLE SHARING FOOD", "Friends sharing plates", "green"), ratio: "aspect-square", caption: "Momos, shared (in theory)." },
+    { image: img("DRINK IMAGE — HANDS HOLDING SHAKE", "Hands holding a shake (stock photo)", "wine", "/images/food-shake-hands.jpg"), ratio: "aspect-[3/4]", caption: "Strawberry or Oreo? Both is an answer." },
+    { image: img("TABLE SHOT", "A table full of food (stock photo)", "amber", "/images/food-table.jpg"), ratio: "aspect-[16/10]", caption: "The table, mid-conversation." },
+    { image: img("PEOPLE SHARING FOOD", "Friends sharing plates (stock photo)", "green", "/images/food-sharing.jpg"), ratio: "aspect-square", caption: "Momos, shared (in theory)." },
   ],
 };
 
@@ -107,22 +110,22 @@ export const experiences = [
   {
     title: "Slow Mornings",
     text: "Coffee, conversations and an easy start.",
-    image: img("MORNING / COFFEE IMAGE", "Morning coffee at Lychee Tree", "green"),
+    image: img("MORNING / COFFEE IMAGE", "Morning coffee (stock photo)", "green", "/images/exp-morning.jpg"),
   },
   {
     title: "Date Nights",
     text: "Warm lights, good food and somewhere to actually talk.",
-    image: img("DATE NIGHT IMAGE", "A table for two under warm lights", "wine"),
+    image: img("DATE NIGHT IMAGE", "A table for two under warm lights (stock photo)", "wine", "/images/exp-date.jpg"),
   },
   {
     title: "Weekend Vibes",
     text: "Brunch, friends and a table that somehow stays occupied for hours.",
-    image: img("WEEKEND / FRIENDS IMAGE", "Friends at a weekend table", "amber"),
+    image: img("WEEKEND / FRIENDS IMAGE", "Friends at a weekend table (stock photo)", "amber", "/images/exp-weekend.jpg"),
   },
   {
     title: "Live Nights",
     text: "Music, drinks and the kind of evenings that become memories.",
-    image: img("LIVE MUSIC IMAGE", "Live music night at the café", "amber"),
+    image: img("LIVE MUSIC IMAGE", "Live music night (stock photo)", "amber", "/images/exp-live.jpg"),
   },
 ];
 
@@ -146,14 +149,14 @@ export type MenuItem = {
 };
 
 export const menuItems: MenuItem[] = [
-  { name: "Veg Kathi Roll", category: "Starters", example: true, image: img("FOOD IMAGE — VEG KATHI ROLL", "Veg Kathi Roll", "amber") },
-  { name: "Momos", category: "Asian", example: true, image: img("FOOD IMAGE — MOMOS", "Momos", "green") },
-  { name: "Chilli Chicken", category: "Asian", example: true, image: img("FOOD IMAGE — CHILLI CHICKEN", "Chilli Chicken", "wine") },
-  { name: "Cottage Cheese Steak", category: "Mains", example: true, image: img("FOOD IMAGE — COTTAGE CHEESE STEAK", "Cottage Cheese Steak", "amber") },
-  { name: "Pasta", category: "Pasta & Pizza", example: true, image: img("FOOD IMAGE — PASTA", "Pasta", "wine") },
-  { name: "Noodles", category: "Asian", example: true, image: img("FOOD IMAGE — NOODLES", "Noodles", "amber") },
-  { name: "Strawberry Shake", category: "Drinks", example: true, image: img("DRINK IMAGE — STRAWBERRY SHAKE", "Strawberry Shake", "wine") },
-  { name: "Oreo Shake", category: "Drinks", example: true, image: img("DRINK IMAGE — OREO SHAKE", "Oreo Shake", "green") },
+  { name: "Veg Kathi Roll", category: "Starters", example: true, image: img("FOOD IMAGE — VEG KATHI ROLL", "Veg Kathi Roll (stock photo)", "amber", "/images/menu-kathi-roll.jpg") },
+  { name: "Momos", category: "Asian", example: true, image: img("FOOD IMAGE — MOMOS", "Momos (stock photo)", "green", "/images/menu-momos.jpg") },
+  { name: "Chilli Chicken", category: "Asian", example: true, image: img("FOOD IMAGE — CHILLI CHICKEN", "Chilli Chicken (stock photo)", "wine", "/images/menu-chilli-chicken.jpg") },
+  { name: "Cottage Cheese Steak", category: "Mains", example: true, image: img("FOOD IMAGE — COTTAGE CHEESE STEAK", "Cottage Cheese Steak (stock photo)", "amber", "/images/menu-cottage-cheese-steak.jpg") },
+  { name: "Pasta", category: "Pasta & Pizza", example: true, image: img("FOOD IMAGE — PASTA", "Pasta (stock photo)", "wine", "/images/menu-pasta.jpg") },
+  { name: "Noodles", category: "Asian", example: true, image: img("FOOD IMAGE — NOODLES", "Noodles (stock photo)", "amber", "/images/menu-noodles.jpg") },
+  { name: "Strawberry Shake", category: "Drinks", example: true, image: img("DRINK IMAGE — STRAWBERRY SHAKE", "Strawberry Shake (stock photo)", "wine", "/images/menu-strawberry-shake.jpg") },
+  { name: "Oreo Shake", category: "Drinks", example: true, image: img("DRINK IMAGE — OREO SHAKE", "Oreo Shake (stock photo)", "green", "/images/menu-oreo-shake.jpg") },
 ];
 
 /* ───────────── Instagram / Moments ─────────────
@@ -161,14 +164,14 @@ export const menuItems: MenuItem[] = [
  * masonry rhythm — mix them.
  */
 export const gallery: { image: SiteImage; ratio: string }[] = [
-  { image: img("INSTAGRAM IMAGE 1", "Moment from Cafe Lychee Tree", "amber"), ratio: "aspect-[4/5]" },
-  { image: img("INSTAGRAM IMAGE 2", "Moment from Cafe Lychee Tree", "green"), ratio: "aspect-square" },
-  { image: img("INSTAGRAM IMAGE 3", "Moment from Cafe Lychee Tree", "wine"), ratio: "aspect-[3/4]" },
-  { image: img("INSTAGRAM IMAGE 4", "Moment from Cafe Lychee Tree", "amber"), ratio: "aspect-[4/3]" },
-  { image: img("INSTAGRAM IMAGE 5", "Moment from Cafe Lychee Tree", "green"), ratio: "aspect-[9/14]" },
-  { image: img("INSTAGRAM IMAGE 6", "Moment from Cafe Lychee Tree", "wine"), ratio: "aspect-square" },
-  { image: img("INSTAGRAM IMAGE 7", "Moment from Cafe Lychee Tree", "amber"), ratio: "aspect-[4/5]" },
-  { image: img("INSTAGRAM IMAGE 8", "Moment from Cafe Lychee Tree", "green"), ratio: "aspect-[4/3]" },
+  { image: img("INSTAGRAM IMAGE 1", "Café moment (stock photo)", "amber", "/images/gallery-1.jpg"), ratio: "aspect-[4/5]" },
+  { image: img("INSTAGRAM IMAGE 2", "Café moment (stock photo)", "green", "/images/gallery-2.jpg"), ratio: "aspect-square" },
+  { image: img("INSTAGRAM IMAGE 3", "Café moment (stock photo)", "wine", "/images/gallery-3.jpg"), ratio: "aspect-[3/4]" },
+  { image: img("INSTAGRAM IMAGE 4", "Café moment (stock photo)", "amber", "/images/gallery-4.jpg"), ratio: "aspect-[4/3]" },
+  { image: img("INSTAGRAM IMAGE 5", "Café moment (stock photo)", "green", "/images/gallery-5.jpg"), ratio: "aspect-[9/14]" },
+  { image: img("INSTAGRAM IMAGE 6", "Café moment (stock photo)", "wine", "/images/gallery-6.jpg"), ratio: "aspect-square" },
+  { image: img("INSTAGRAM IMAGE 7", "Café moment (stock photo)", "amber", "/images/gallery-7.jpg"), ratio: "aspect-[4/5]" },
+  { image: img("INSTAGRAM IMAGE 8", "Café moment (stock photo)", "green", "/images/gallery-8.jpg"), ratio: "aspect-[4/3]" },
 ];
 
 /* ───────────── Reviews ─────────────

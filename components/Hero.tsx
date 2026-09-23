@@ -24,9 +24,9 @@ export function Hero() {
       <motion.div style={{ y: imgY }} className="absolute inset-0 will-change-transform">
         <motion.div
           className="absolute inset-0"
-          initial={{ scale: 1.22, opacity: 0 }}
-          animate={{ scale: 1.04, opacity: 1 }}
-          transition={{ duration: 3.2, ease }}
+          initial={{ scale: 1.1, opacity: 0 }}
+          animate={{ scale: 1.03, opacity: 1 }}
+          transition={{ duration: 1.5, ease }}
         >
           <Photo
             image={images.hero}
@@ -46,7 +46,7 @@ export function Hero() {
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.8, duration: 1.4 }}
+        transition={{ delay: 0.9, duration: 0.7 }}
         className="eyebrow absolute top-1/2 right-7 z-10 hidden -translate-y-1/2 text-cream/55 [writing-mode:vertical-rl] lg:block xl:right-10"
       >
         Come for the food <span className="mx-3 text-ember">✦</span> Stay for the vibe
@@ -59,7 +59,7 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease, delay: 0.5 }}
+          transition={{ duration: 0.55, ease, delay: 0.15 }}
           className="mb-6 flex items-center gap-4 md:mb-8"
         >
           <span className="h-px w-10 bg-ember" />
@@ -73,7 +73,7 @@ export function Hero() {
         <Lines
           as="h1"
           animateOnMount
-          delay={0.6}
+          delay={0.3}
           className="display text-[16.5vw] sm:text-[12vw] md:text-[9.5vw] xl:text-[8.6rem]"
           lines={[
             <span key="a">
@@ -90,7 +90,7 @@ export function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease, delay: 1.3 }}
+            transition={{ duration: 0.6, ease, delay: 0.65 }}
             className="max-w-sm text-[15px] leading-relaxed text-cream/80 md:text-base"
           >
             A cozy corner in Dehradun for good food, conversations, music and unhurried evenings.
@@ -98,7 +98,7 @@ export function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease, delay: 1.5 }}
+            transition={{ duration: 0.6, ease, delay: 0.75 }}
             className="flex flex-wrap gap-3"
           >
             <CTA href="/#menu" variant="light">
@@ -116,7 +116,7 @@ export function Hero() {
         href="/#space"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 2.2, duration: 1 }}
+        transition={{ delay: 1.1, duration: 0.6 }}
         className="absolute bottom-5 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2.5 md:bottom-6 md:gap-3"
       >
         <span className="text-[10px] font-semibold tracking-[.32em] text-cream/60 uppercase">Scroll to explore ↓</span>

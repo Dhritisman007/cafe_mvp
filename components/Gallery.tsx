@@ -47,15 +47,15 @@ export function Gallery() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "0px 0px -8% 0px" }}
-              transition={{ duration: 1, ease, delay: (i % 4) * 0.1 }}
+              transition={{ duration: 0.5, ease, delay: (i % 4) * 0.06 }}
               className={`group relative mb-3 block break-inside-avoid overflow-hidden md:mb-5 ${g.ratio}`}
               aria-label="View on Instagram"
             >
-              <div className="absolute inset-0 transition-transform duration-[1.4s] ease-soft group-hover:scale-[1.07]">
+              <div className="absolute inset-0 transition-transform duration-450 ease-soft group-hover:scale-[1.07]">
                 <Photo image={g.image} sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw" />
               </div>
-              <div className="absolute inset-0 flex items-center justify-center bg-forest/0 transition-colors duration-500 group-hover:bg-forest/45">
-                <span className="flex translate-y-3 items-center gap-2 text-[10px] font-semibold tracking-[.24em] text-cream uppercase opacity-0 transition-all duration-500 ease-soft group-hover:translate-y-0 group-hover:opacity-100">
+              <div className="absolute inset-0 flex items-center justify-center bg-forest/0 transition-colors duration-350 group-hover:bg-forest/45">
+                <span className="flex translate-y-3 items-center gap-2 text-[10px] font-semibold tracking-[.24em] text-cream uppercase opacity-0 transition-all duration-350 ease-soft group-hover:translate-y-0 group-hover:opacity-100">
                   <InstagramIcon className="h-4 w-4" /> View
                 </span>
               </div>

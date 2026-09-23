@@ -30,19 +30,19 @@ export function Navbar() {
       <motion.header
         initial={{ y: -30, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 1.2, ease, delay: 0.2 }}
+        transition={{ duration: 0.6, ease, delay: 0.1 }}
         className="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-6 md:pt-4"
       >
         <nav
           aria-label="Main"
-          className={`mx-auto flex items-center justify-between rounded-full text-cream transition-all duration-700 ease-soft ${
+          className={`mx-auto flex items-center justify-between rounded-full text-cream transition-all duration-500 ease-soft ${
             scrolled
               ? "max-w-5xl border border-cream/10 bg-forest/90 py-2 pr-2 pl-5 shadow-[0_10px_40px_-10px_rgba(0,0,0,.5)] backdrop-blur-xl"
               : "max-w-[1400px] border border-transparent py-3 pr-2 pl-2 md:pl-4"
           }`}
         >
           <a href="/#home" className="group flex items-center gap-2.5" aria-label={`${business.name} — home`}>
-            <LycheeMark className="h-7 w-7 text-cream transition-transform duration-700 ease-soft group-hover:rotate-[-12deg]" />
+            <LycheeMark className="h-7 w-7 text-cream transition-transform duration-500 ease-soft group-hover:rotate-[-12deg]" />
             <span className="font-serif text-lg tracking-[.1em] uppercase sm:text-xl sm:tracking-[.14em]">{business.shortName}</span>
           </a>
 
@@ -90,7 +90,7 @@ export function Navbar() {
             initial={{ clipPath: "inset(0 0 100% 0)" }}
             animate={{ clipPath: "inset(0 0 0% 0)" }}
             exit={{ clipPath: "inset(0 0 100% 0)" }}
-            transition={{ duration: 0.8, ease }}
+            transition={{ duration: 0.5, ease }}
             role="dialog"
             aria-modal="true"
             aria-label="Menu"
@@ -119,7 +119,7 @@ export function Navbar() {
                     onClick={() => setOpen(false)}
                     initial={{ y: "100%" }}
                     animate={{ y: "0%" }}
-                    transition={{ duration: 0.9, ease, delay: 0.25 + i * 0.06 }}
+                    transition={{ duration: 0.5, ease, delay: 0.12 + i * 0.04 }}
                     className="flex items-baseline gap-4 py-1 font-serif text-[13vw] leading-[1.05] font-light"
                   >
                     <span className="font-sans text-[10px] tracking-[.2em] text-cream/40">0{i + 1}</span>
@@ -132,7 +132,7 @@ export function Navbar() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
+              transition={{ delay: 0.35, duration: 0.4 }}
               className="relative space-y-5 border-t border-cream/10 px-5 pt-6 pb-10"
             >
               <p className="text-sm leading-relaxed text-cream/60">{business.address.lines.join(" ")}</p>

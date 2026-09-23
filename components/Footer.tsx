@@ -25,7 +25,7 @@ export function Footer() {
                   className="group relative font-serif text-2xl text-cream/85 transition-colors hover:text-cream"
                 >
                   {l.label}
-                  <span className="absolute -bottom-1 left-0 h-px w-full origin-right scale-x-0 bg-ember transition-transform duration-500 ease-soft group-hover:origin-left group-hover:scale-x-100" />
+                  <span className="absolute -bottom-1 left-0 h-px w-full origin-right scale-x-0 bg-ember transition-transform duration-350 ease-soft group-hover:origin-left group-hover:scale-x-100" />
                 </a>
               </li>
             ))}

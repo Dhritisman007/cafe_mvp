@@ -25,7 +25,7 @@ function IconFor({ icon }: { icon: Icon }) {
     case "arrow":
       return (
         <ArrowRight
-          className={`${cls} transition-transform duration-500 ease-soft group-hover:translate-x-1.5`}
+          className={`${cls} transition-transform duration-350 ease-soft group-hover:translate-x-1.5`}
           strokeWidth={1.6}
         />
       );
@@ -55,13 +55,13 @@ export function CTA({
     <a
       href={href}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-      className={`group relative inline-flex h-13 items-center justify-center gap-3 rounded-full px-7 text-[11px] font-semibold tracking-[.24em] uppercase transition-colors duration-500 ease-soft ${variants[variant]} ${className}`}
+      className={`group relative inline-flex h-13 items-center justify-center gap-3 rounded-full px-7 text-[11px] font-semibold tracking-[.24em] uppercase transition-colors duration-350 ease-soft ${variants[variant]} ${className}`}
     >
       {iconFirst && icon !== "arrow" && <IconFor icon={icon} />}
       <span className="relative">
         {children}
         {underline && (
-          <span className="absolute -bottom-1.5 left-0 h-px w-full origin-left scale-x-100 bg-current opacity-40 transition-transform duration-700 ease-soft group-hover:scale-x-0 group-hover:origin-right" />
+          <span className="absolute -bottom-1.5 left-0 h-px w-full origin-left scale-x-100 bg-current opacity-40 transition-transform duration-450 ease-soft group-hover:scale-x-0 group-hover:origin-right" />
         )}
       </span>
       {(!iconFirst || icon === "arrow") && <IconFor icon={icon} />}
